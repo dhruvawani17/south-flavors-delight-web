@@ -44,7 +44,7 @@ const Navigation = () => {
               </Link>
             ))}
             <ReservationDialog>
-              <Button className="bg-spice-gradient text-white hover:opacity-90">
+              <Button className="bg-spice-gradient text-black hover:opacity-90">
                 Reserve Table
               </Button>
             </ReservationDialog>

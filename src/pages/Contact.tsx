@@ -214,7 +214,7 @@ const Contact = () => {
                   </p>
                   <div className="space-y-4">
                     <ReservationDialog>
-                      <Button className="w-full bg-spice-gradient text-white hover:opacity-90">
+                      <Button className="w-full bg-spice-gradient text-black hover:opacity-90">
                         Reserve Online
                       </Button>
                     </ReservationDialog>
