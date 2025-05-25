@@ -16,19 +16,19 @@ const Gallery = () => {
   const galleryImages = [
     {
       id: 1,
-      url: "https://www.bing.com/images/search?view=detailV2&ccid=6Nx%2fC1m4&id=B6AB1AC2F0256736CD90A8E00FA115A871459A69&thid=OIP.6Nx_C1m4YCujBiHe48YpHAHaE8&mediaurl=https%3a%2f%2fvismaifood.com%2fstorage%2fapp%2fuploads%2fpublic%2f8b4%2f19e%2f427%2fthumb__1200_0_0_0_auto.jpg&exph=800&expw=1200&q=masala+dosa&simid=607986672342882770&FORM=IRPRST&ck=8E0A3805C632F9B37CB59BEED8373F6D&selectedIndex=1&itb=0",
+      url: "https://vismaifood.com/storage/app/uploads/public/8b4/19e/427/thumb__1200_0_0_0_auto.jpg",
       title: "Masala Dosa",
       category: "food"
     },
     {
       id: 2,
-      url: "https://www.bing.com/images/search?view=detailV2&ccid=U%2b3hPOce&id=A7D2993BD454855FDE7DFBCFF17EED9F90CA4FC2&thid=OIP.U-3hPOce51o9p_XycLQrnwHaEK&mediaurl=https%3a%2f%2fassets.architecturaldigest.in%2fphotos%2f6008202a345ead69c9c1ab91%2fmaster%2fw_1600%252Cc_limit%2fBandra-Madras-Diaries-Interior-5.jpg&exph=900&expw=1600&q=south+indian+restaurant&simid=608054571497439600&FORM=IRPRST&ck=9BE66725E7655464980D7B304AEA953C&selectedIndex=2&itb=0",
+      url: "https://assets.architecturaldigest.in/photos/6008202a345ead69c9c1ab91/master/w_1600%2Cc_limit/Bandra-Madras-Diaries-Interior-5.jpg",
       title: "Restaurant Interior",
       category: "restaurant"
     },
     {
       id: 3,
-      url: "https://www.bing.com/images/search?view=detailV2&ccid=wBu0Xsb7&id=1013D4FA376A211A54C3FAA624579408F34DB246&thid=OIP.wBu0Xsb774mtzvjhq1C3DgHaE8&mediaurl=https%3a%2f%2fwww.thespruceeats.com%2fthmb%2fSalyKjzBU-K1Bv-FTFWnbd6ckjY%3d%2f2121x1414%2ffilters%3afill(auto%2c1)%2fGettyImages-639704020-5c4a63ecc9e77c00017bfebf.jpg&exph=1414&expw=2121&q=biryani&simid=608037730925372843&FORM=IRPRST&ck=8EF116477F635073DB94563520E8A6D7&selectedIndex=1&itb=0",
+      url: "https://norecipes.com/wp-content/uploads/2017/05/chicken-biryani-006.jpg",
       title: "Biryani Special",
       category: "food"
     },
