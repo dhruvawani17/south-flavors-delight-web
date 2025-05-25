@@ -18,21 +18,21 @@ const Index = () => {
       id: 1,
       name: "Masala Dosa",
       description: "Crispy rice crepe filled with spiced potato curry",
-      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=300&fit=crop",
+      image: "https://vismaifood.com/storage/app/uploads/public/8b4/19e/427/thumb__1200_0_0_0_auto.jpg",
       price: "₹120"
     },
     {
       id: 2,
       name: "Hyderabadi Biryani",
       description: "Aromatic basmati rice with tender lamb and exotic spices",
-      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop",
+      image: "https://wallpaperaccess.com/full/1972917.jpg",
       price: "₹280"
     },
     {
       id: 3,
       name: "Filter Coffee",
       description: "Traditional South Indian filter coffee with chicory",
-      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=300&fit=crop",
+      image: "https://static.vecteezy.com/system/resources/previews/013/754/794/large_2x/south-indian-filter-coffee-served-in-a-traditional-brass-or-stainless-steel-cup-free-photo.jpg",
       price: "₹40"
     }
   ];
