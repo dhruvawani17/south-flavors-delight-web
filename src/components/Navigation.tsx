@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import ReservationDialog from './ReservationDialog';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,9 +43,11 @@ const Navigation = () => {
                 {item.label}
               </Link>
             ))}
-            <Button className="bg-spice-gradient text-white hover:opacity-90">
-              Reserve Table
-            </Button>
+            <ReservationDialog>
+              <Button className="bg-spice-gradient text-white hover:opacity-90">
+                Reserve Table
+              </Button>
+            </ReservationDialog>
           </div>
 
           {/* Mobile Menu Button */}
@@ -74,9 +77,11 @@ const Navigation = () => {
                   {item.label}
                 </Link>
               ))}
-              <Button className="bg-spice-gradient text-white hover:opacity-90 w-fit">
-                Reserve Table
-              </Button>
+              <ReservationDialog>
+                <Button className="bg-spice-gradient text-white hover:opacity-90 w-fit">
+                  Reserve Table
+                </Button>
+              </ReservationDialog>
             </div>
           </div>
         )}

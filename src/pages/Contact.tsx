@@ -4,6 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import ReservationDialog from '@/components/ReservationDialog';
 
 const Contact = () => {
   const contactInfo = [
@@ -212,9 +213,11 @@ const Contact = () => {
                     Book your table in advance to ensure the best dining experience.
                   </p>
                   <div className="space-y-4">
-                    <Button className="w-full bg-spice-gradient text-white hover:opacity-90">
-                      Reserve Online
-                    </Button>
+                    <ReservationDialog>
+                      <Button className="w-full bg-spice-gradient text-white hover:opacity-90">
+                        Reserve Online
+                      </Button>
+                    </ReservationDialog>
                     <Button variant="outline" className="w-full border-spice-paprika text-spice-paprika hover:bg-spice-paprika hover:text-white">
                       Call for Reservation
                     </Button>
