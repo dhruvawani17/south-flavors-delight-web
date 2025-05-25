@@ -40,7 +40,7 @@ const Gallery = () => {
     },
     {
       id: 5,
-      url: "https://www.bing.com/images/search?view=detailV2&ccid=K%2fScF0y1&id=DCF749531E440756D2347688D4A7C299050726C3&thid=OIP.K_ScF0y1yobcrPOeVTcuZwHaFx&mediaurl=https%3a%2f%2fimgmedia.lbb.in%2fmedia%2f2019%2f06%2f5cf5fa110f91d91bef79433c_1559624209011.jpg&exph=3000&expw=3852&q=south+indian+thali&simid=608037434577535689&FORM=IRPRST&ck=36ED2267B53DCB245BCE4482D0D8187E&selectedIndex=3&itb=0",
+      url: "https://th.bing.com/th/id/OIP.KtEm98mF6k9lTSax8mcTfQHaHa?cb=iwc2&rs=1&pid=ImgDetMain",
       title: "Traditional Thali",
       category: "food"
     },
