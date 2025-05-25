@@ -34,7 +34,7 @@ const Gallery = () => {
     },
     {
       id: 4,
-      url: "https://images.unsplash.com/photo-1556909114-4ee7ca324a82?w=600&h=400&fit=crop",
+      url: "https://th.bing.com/th/id/OIP.61FZk2jmWzxTx4FoyzQ-QwHaE6?cb=iwc2&rs=1&pid=ImgDetMain",
       title: "Kitchen Excellence",
       category: "chef"
     },
