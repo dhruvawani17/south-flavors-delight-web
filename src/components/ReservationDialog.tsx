@@ -278,7 +278,7 @@ const ReservationDialog = ({ children }: ReservationDialogProps) => {
             </Button>
             <Button
               type="submit"
-              className="flex-1 bg-spice-gradient text-white hover:opacity-90"
+              className="flex-1 bg-spice-gradient text-black hover:opacity-90"
             >
               Confirm Reservation
             </Button>
