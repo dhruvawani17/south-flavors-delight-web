@@ -68,7 +68,7 @@ const Index = () => {
                 View Menu <ArrowRight className="ml-2" size={20} />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black">
+            <Button size="lg" variant="outline" className="border-white text-red hover:bg-white hover:text-black">
               Reserve Table
             </Button>
           </div>
