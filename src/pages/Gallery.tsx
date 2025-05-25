@@ -28,7 +28,7 @@ const Gallery = () => {
     },
     {
       id: 3,
-      url: "https://norecipes.com/wp-content/uploads/2017/05/chicken-biryani-006.jpg",
+      url: "https://wallpaperaccess.com/full/1972917.jpg",
       title: "Biryani Special",
       category: "food"
     },
