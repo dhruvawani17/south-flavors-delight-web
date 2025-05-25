@@ -16,19 +16,19 @@ const Gallery = () => {
   const galleryImages = [
     {
       id: 1,
-      url: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=600&h=400&fit=crop",
+      url: "https://www.bing.com/images/search?view=detailV2&ccid=6Nx%2fC1m4&id=B6AB1AC2F0256736CD90A8E00FA115A871459A69&thid=OIP.6Nx_C1m4YCujBiHe48YpHAHaE8&mediaurl=https%3a%2f%2fvismaifood.com%2fstorage%2fapp%2fuploads%2fpublic%2f8b4%2f19e%2f427%2fthumb__1200_0_0_0_auto.jpg&exph=800&expw=1200&q=masala+dosa&simid=607986672342882770&FORM=IRPRST&ck=8E0A3805C632F9B37CB59BEED8373F6D&selectedIndex=1&itb=0",
       title: "Masala Dosa",
       category: "food"
     },
     {
       id: 2,
-      url: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
+      url: "https://www.bing.com/images/search?view=detailV2&ccid=U%2b3hPOce&id=A7D2993BD454855FDE7DFBCFF17EED9F90CA4FC2&thid=OIP.U-3hPOce51o9p_XycLQrnwHaEK&mediaurl=https%3a%2f%2fassets.architecturaldigest.in%2fphotos%2f6008202a345ead69c9c1ab91%2fmaster%2fw_1600%252Cc_limit%2fBandra-Madras-Diaries-Interior-5.jpg&exph=900&expw=1600&q=south+indian+restaurant&simid=608054571497439600&FORM=IRPRST&ck=9BE66725E7655464980D7B304AEA953C&selectedIndex=2&itb=0",
       title: "Restaurant Interior",
       category: "restaurant"
     },
     {
       id: 3,
-      url: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600&h=400&fit=crop",
+      url: "https://www.bing.com/images/search?view=detailV2&ccid=wBu0Xsb7&id=1013D4FA376A211A54C3FAA624579408F34DB246&thid=OIP.wBu0Xsb774mtzvjhq1C3DgHaE8&mediaurl=https%3a%2f%2fwww.thespruceeats.com%2fthmb%2fSalyKjzBU-K1Bv-FTFWnbd6ckjY%3d%2f2121x1414%2ffilters%3afill(auto%2c1)%2fGettyImages-639704020-5c4a63ecc9e77c00017bfebf.jpg&exph=1414&expw=2121&q=biryani&simid=608037730925372843&FORM=IRPRST&ck=8EF116477F635073DB94563520E8A6D7&selectedIndex=1&itb=0",
       title: "Biryani Special",
       category: "food"
     },
@@ -40,7 +40,7 @@ const Gallery = () => {
     },
     {
       id: 5,
-      url: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=600&h=400&fit=crop",
+      url: "https://www.bing.com/images/search?view=detailV2&ccid=K%2fScF0y1&id=DCF749531E440756D2347688D4A7C299050726C3&thid=OIP.K_ScF0y1yobcrPOeVTcuZwHaFx&mediaurl=https%3a%2f%2fimgmedia.lbb.in%2fmedia%2f2019%2f06%2f5cf5fa110f91d91bef79433c_1559624209011.jpg&exph=3000&expw=3852&q=south+indian+thali&simid=608037434577535689&FORM=IRPRST&ck=36ED2267B53DCB245BCE4482D0D8187E&selectedIndex=3&itb=0",
       title: "Traditional Thali",
       category: "food"
     },
@@ -52,7 +52,7 @@ const Gallery = () => {
     },
     {
       id: 7,
-      url: "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&h=400&fit=crop",
+      url: "https://www.bing.com/images/search?view=detailV2&ccid=KtEm98mF&id=2A37A9224BE4AC9D6CC35AB4C13FD93946FE44DA&thid=OIP.KtEm98mF6k9lTSax8mcTfQHaHa&mediaurl=https%3a%2f%2ftraditionallymodernfood.com%2fwp-content%2fuploads%2f2023%2f01%2fcooking-for-guests-south-indian-lunch-combo-1-scaled.jpeg&exph=2560&expw=2560&q=south+indian+thali&simid=608004672562994091&FORM=IRPRST&ck=7A10391AD52546C5B62260B35DDAAD57&selectedIndex=1&itb=0",
       title: "Sambar & Rice",
       category: "food"
     },
@@ -88,14 +88,14 @@ const Gallery = () => {
     }
   ];
 
-  const filteredImages = activeFilter === 'all' 
-    ? galleryImages 
+  const filteredImages = activeFilter === 'all'
+    ? galleryImages
     : galleryImages.filter(img => img.category === activeFilter);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
       <Navigation />
-      
+
       {/* Header */}
       <section className="pt-24 pb-12">
         <div className="container mx-auto px-4 text-center">
@@ -116,11 +116,10 @@ const Gallery = () => {
               <button
                 key={filter.id}
                 onClick={() => setActiveFilter(filter.id)}
-                className={`px-6 py-3 rounded-full transition-all duration-300 flex items-center gap-2 ${
-                  activeFilter === filter.id
+                className={`px-6 py-3 rounded-full transition-all duration-300 flex items-center gap-2 ${activeFilter === filter.id
                     ? 'bg-spice-gradient text-white shadow-lg scale-105'
                     : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-                }`}
+                  }`}
               >
                 <span>{filter.icon}</span>
                 <span className="font-medium">{filter.name}</span>
@@ -135,14 +134,14 @@ const Gallery = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredImages.map((image, index) => (
-              <Card 
+              <Card
                 key={image.id}
                 className="group overflow-hidden border-0 bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-500 animate-scale-in"
-                style={{animationDelay: `${index * 50}ms`}}
+                style={{ animationDelay: `${index * 50}ms` }}
               >
                 <div className="relative overflow-hidden">
-                  <img 
-                    src={image.url} 
+                  <img
+                    src={image.url}
                     alt={image.title}
                     className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
                   />
@@ -166,7 +165,7 @@ const Gallery = () => {
             Experience the Magic
           </h2>
           <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
-            Visit us to experience these flavors and moments firsthand. 
+            Visit us to experience these flavors and moments firsthand.
             Every dish tells a story, and every visit creates a memory.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
