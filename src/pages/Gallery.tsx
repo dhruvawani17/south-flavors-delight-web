@@ -52,7 +52,7 @@ const Gallery = () => {
     },
     {
       id: 7,
-      url: "https://www.bing.com/images/search?view=detailV2&ccid=KtEm98mF&id=2A37A9224BE4AC9D6CC35AB4C13FD93946FE44DA&thid=OIP.KtEm98mF6k9lTSax8mcTfQHaHa&mediaurl=https%3a%2f%2ftraditionallymodernfood.com%2fwp-content%2fuploads%2f2023%2f01%2fcooking-for-guests-south-indian-lunch-combo-1-scaled.jpeg&exph=2560&expw=2560&q=south+indian+thali&simid=608004672562994091&FORM=IRPRST&ck=7A10391AD52546C5B62260B35DDAAD57&selectedIndex=1&itb=0",
+      url: "https://static.toiimg.com/photo/60781217.cms",
       title: "Sambar & Rice",
       category: "food"
     },
@@ -82,7 +82,7 @@ const Gallery = () => {
     },
     {
       id: 12,
-      url: "https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=600&h=400&fit=crop",
+      url: "https://th.bing.com/th/id/OIP.ssh5tS1tIPYPJ17-CGk3OAHaED?cb=iwc2&rs=1&pid=ImgDetMain",
       title: "Kitchen Team",
       category: "chef"
     }
