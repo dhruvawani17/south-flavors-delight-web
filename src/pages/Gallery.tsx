@@ -64,13 +64,13 @@ const Gallery = () => {
     },
     {
       id: 9,
-      url: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=600&h=400&fit=crop",
+      url: "https://static.vecteezy.com/system/resources/previews/013/754/794/large_2x/south-indian-filter-coffee-served-in-a-traditional-brass-or-stainless-steel-cup-free-photo.jpg",
       title: "Filter Coffee",
       category: "food"
     },
     {
       id: 10,
-      url: "https://images.unsplash.com/photo-1544148103-0773bf10d330?w=600&h=400&fit=crop",
+      url: "https://thearchitectsdiary.com/wp-content/uploads/2019/12/triple-A.jpg",
       title: "Cozy Ambiance",
       category: "restaurant"
     },
