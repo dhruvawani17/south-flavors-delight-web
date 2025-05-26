@@ -63,13 +63,16 @@ const Index = () => {
             Experience the rich heritage of South Indian cuisine in every bite
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-spice-gradient text-white hover:opacity-90">
-              <Link to="/menu" className="flex items-center">
-                View Menu <ArrowRight className="ml-2" size={20} />
-              </Link>
-            </Button>
+           <Button
+  size="lg"
+  variant="outline"
+  className="border-white text-black hover:bg-white hover:text-black"
+>
+  <Link to="/reservation" className="flex items-center">
+    Reserve Table
+  </Link>
+</Button>
             <Button size="lg" variant="outline" className="border-white text-black hover:bg-white hover:text-black">
-              <link to="/reservation"></link>
               Reserve Table
             </Button>
           </div>
