@@ -146,7 +146,7 @@ const Index = () => {
             </div>
             <div className="animate-slide-in-right">
               <img 
-                src="https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=600&h=400&fit=crop" 
+                src="https://www.tripsavvy.com/thmb/6p9ygulce7z7jtHERdHInLdpdEg=/3200x2134/filters:fill(auto,1)/IMG_94941_andymcroryphoto_herbandwood_HI-res-f1ba0cdea1464eefa5d5558d840c6d47.jpg" 
                 alt="Traditional South Indian cooking"
                 className="rounded-lg shadow-2xl w-full animate-float"
               />
