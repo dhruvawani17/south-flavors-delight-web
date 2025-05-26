@@ -16,14 +16,14 @@ const About = () => {
       title: "Sous Chef",
       experience: "15+ years",
       specialty: "Kerala seafood dishes",
-      image: "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=300&h=300&fit=crop"
+      image: "https://static.vecteezy.com/system/resources/previews/033/692/644/large_2x/chef-preparing-food-in-the-kitchen-at-the-restaurant-professional-chef-cooking-gourmet-chef-cooking-in-a-commercial-kitchen-ai-generated-free-photo.jpg"
     },
     {
       name: "Chef Suresh Reddy",
       title: "Spice Master",
       experience: "20+ years",
       specialty: "Andhra Pradesh spice blends",
-      image: "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=300&h=300&fit=crop"
+      image: "https://thumbs.dreamstime.com/b/professional-male-chef-cooking-29061504.jpg"
     }
   ];
 
