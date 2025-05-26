@@ -69,6 +69,7 @@ const Index = () => {
               </Link>
             </Button>
             <Button size="lg" variant="outline" className="border-white text-black hover:bg-white hover:text-black">
+              <link to="/reservation"></link>
               Reserve Table
             </Button>
           </div>
