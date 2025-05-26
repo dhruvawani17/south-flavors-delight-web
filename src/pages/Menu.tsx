@@ -17,14 +17,14 @@ const Menu = () => {
 
   const menuItems = {
     appetizers: [
-      { name: 'Medu Vada', description: 'Crispy lentil donuts served with sambar and chutneys', price: '₹80', image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=300&h=200&fit=crop' },
-      { name: 'Idli Sambar', description: 'Steamed rice cakes with lentil curry', price: '₹70', image: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=300&h=200&fit=crop' },
-      { name: 'Rasam Vada', description: 'Lentil donuts soaked in tangy tomato rasam', price: '₹90', image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?w=300&h=200&fit=crop' }
+      { name: 'Medu Vada', description: 'Crispy lentil donuts served with sambar and chutneys', price: '₹80', image: 'https://foodiewish.com/wp-content/uploads/2020/05/Medu-Vada-Recipe-1.jpg' },
+      { name: 'Idli Sambar', description: 'Steamed rice cakes with lentil curry', price: '₹70', image: 'https://www.awesomecuisine.com/wp-content/uploads/2008/02/idli_sambar.jpg' },
+      { name: 'Rasam Vada', description: 'Lentil donuts soaked in tangy tomato rasam', price: '₹90', image: 'https://th.bing.com/th/id/R.55377a4c91335420a8d36b902bdefcd5?rik=W8dGIfxND9dmew&riu=http%3a%2f%2fwww.nithyas-kitchen.com%2fwp-content%2fuploads%2f2016%2f08%2frasam-vada.1024x1024-1.jpg&ehk=lshXj6jyBzhT0hXT%2ffIONSf%2b6n%2b1Sytw3MrgonvEfXs%3d&risl=&pid=ImgRaw&r=0' }
     ],
     dosa: [
-      { name: 'Masala Dosa', description: 'Crispy crepe with spiced potato filling', price: '₹120', image: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=300&h=200&fit=crop' },
-      { name: 'Mysore Masala Dosa', description: 'Spicy red chutney dosa with potato curry', price: '₹140', image: 'https://images.unsplash.com/photo-1630383249896-424e482df921?w=300&h=200&fit=crop' },
-      { name: 'Rava Dosa', description: 'Crispy semolina crepe with onions and herbs', price: '₹110', image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?w=300&h=200&fit=crop' }
+      { name: 'Masala Dosa', description: 'Crispy crepe with spiced potato filling', price: '₹120', image: 'https://vismaifood.com/storage/app/uploads/public/8b4/19e/427/thumb__1200_0_0_0_auto.jpg' },
+      { name: 'Mysore Masala Dosa', description: 'Spicy red chutney dosa with potato curry', price: '₹140', image: 'https://vismaifood.com/storage/app/uploads/public/45a/29b/a17/thumb__700_0_0_0_auto.jpg' },
+      { name: 'Rava Dosa', description: 'Crispy semolina crepe with onions and herbs', price: '₹110', image: 'https://vegecravings.com/wp-content/uploads/2023/07/Rava-Dosa-Recipe-Step-By-Step-Instructions-scaled.jpg' }
     ],
     rice: [
       { name: 'Hyderabadi Biryani', description: 'Aromatic basmati rice with tender meat', price: '₹280', image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=300&h=200&fit=crop' },
