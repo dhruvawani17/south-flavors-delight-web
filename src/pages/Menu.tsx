@@ -27,24 +27,24 @@ const Menu = () => {
       { name: 'Rava Dosa', description: 'Crispy semolina crepe with onions and herbs', price: '₹110', image: 'https://vegecravings.com/wp-content/uploads/2023/07/Rava-Dosa-Recipe-Step-By-Step-Instructions-scaled.jpg' }
     ],
     rice: [
-      { name: 'Hyderabadi Biryani', description: 'Aromatic basmati rice with tender meat', price: '₹280', image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=300&h=200&fit=crop' },
-      { name: 'Curd Rice', description: 'Cooling yogurt rice with curry leaves', price: '₹100', image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?w=300&h=200&fit=crop' },
-      { name: 'Lemon Rice', description: 'Tangy rice with peanuts and spices', price: '₹90', image: 'https://images.unsplash.com/photo-1631166528181-47bdd9a7bf48?w=300&h=200&fit=crop' }
+      { name: 'Hyderabadi Biryani', description: 'Aromatic basmati rice with tender meat', price: '₹280', image: 'https://www.thespruceeats.com/thmb/SalyKjzBU-K1Bv-FTFWnbd6ckjY=/2121x1414/filters:fill(auto,1)/GettyImages-639704020-5c4a63ecc9e77c00017bfebf.jpg' },
+      { name: 'Curd Rice', description: 'Cooling yogurt rice with curry leaves', price: '₹100', image: 'https://th.bing.com/th/id/OIP.cJzQ-h7MG0O2-osrDcUuLgHaEn?cb=iwc2&rs=1&pid=ImgDetMain' },
+      { name: 'Lemon Rice', description: 'Tangy rice with peanuts and spices', price: '₹90', image: 'https://vegecravings.com/wp-content/uploads/2018/02/Lemon-Rice-Recipe-Step-by-Step-Instructions.jpg' }
     ],
     curries: [
-      { name: 'Sambar', description: 'Traditional lentil curry with vegetables', price: '₹80', image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?w=300&h=200&fit=crop' },
-      { name: 'Paneer Butter Masala', description: 'Creamy tomato curry with cottage cheese', price: '₹180', image: 'https://images.unsplash.com/photo-1631166528181-47bdd9a7bf48?w=300&h=200&fit=crop' },
-      { name: 'Fish Curry', description: 'Kerala style coconut fish curry', price: '₹220', image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=300&h=200&fit=crop' }
+      { name: 'Sambar', description: 'Traditional lentil curry with vegetables', price: '₹80', image: 'https://www.cubesnjuliennes.com/wp-content/uploads/2021/01/South-Indian-Sambar-Recipe.jpg' },
+      { name: 'Paneer Butter Masala', description: 'Creamy tomato curry with cottage cheese', price: '₹180', image: 'https://myfoodstory.com/wp-content/uploads/2021/10/Paneer-Butter-Masala-1-2.jpg' },
+      { name: 'Fish Curry', description: 'Kerala style coconut fish curry', price: '₹220', image: 'https://th.bing.com/th/id/OIP.DlrYNJg4bt3cn4Xr5R5gsQHaE7?cb=iwc2&rs=1&pid=ImgDetMain' }
     ],
     beverages: [
-      { name: 'Filter Coffee', description: 'Traditional South Indian filter coffee', price: '₹40', image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=300&h=200&fit=crop' },
-      { name: 'Masala Chai', description: 'Spiced tea with milk and aromatic spices', price: '₹35', image: 'https://images.unsplash.com/photo-1576175709423-41ad39b6ad28?w=300&h=200&fit=crop' },
-      { name: 'Tender Coconut', description: 'Fresh coconut water straight from the shell', price: '₹60', image: 'https://images.unsplash.com/photo-1590736969955-71cc94901144?w=300&h=200&fit=crop' }
+      { name: 'Filter Coffee', description: 'Traditional South Indian filter coffee', price: '₹40', image: 'https://static.vecteezy.com/system/resources/previews/013/754/794/large_2x/south-indian-filter-coffee-served-in-a-traditional-brass-or-stainless-steel-cup-free-photo.jpg' },
+      { name: 'Masala Chai', description: 'Spiced tea with milk and aromatic spices', price: '₹35', image: 'https://carameltintedlife.com/wp-content/uploads/2021/01/Masala-Chai-.jpg' },
+      { name: 'Tender Coconut', description: 'Fresh coconut water straight from the shell', price: '₹60', image: 'https://www.nutritionfact.in/wp-content/uploads/2023/07/Tender-Coconut-1536x864.jpg' }
     ],
     desserts: [
-      { name: 'Gulab Jamun', description: 'Sweet milk dumplings in rose syrup', price: '₹80', image: 'https://images.unsplash.com/photo-1627308595127-d9acf19107ce?w=300&h=200&fit=crop' },
-      { name: 'Payasam', description: 'Traditional rice pudding with cardamom', price: '₹70', image: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=300&h=200&fit=crop' },
-      { name: 'Kesari', description: 'Semolina sweet with ghee and saffron', price: '₹60', image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?w=300&h=200&fit=crop' }
+      { name: 'Gulab Jamun', description: 'Sweet milk dumplings in rose syrup', price: '₹80', image: 'https://images.slurrp.com/prod/articles/1m5e86yy5vl.webp' },
+      { name: 'Payasam', description: 'Traditional rice pudding with cardamom', price: '₹70', image: 'https://www.indianhealthyrecipes.com/wp-content/uploads/2014/08/semiya-payasam.jpg' },
+      { name: 'Kesari', description: 'Semolina sweet with ghee and saffron', price: '₹60', image: 'https://www.tastingtable.com/img/gallery/kesari-is-the-indian-dessert-that-shines-bright-from-saffron-upgrade/l-intro-1701376057.jpg' }
     ]
   };
 
