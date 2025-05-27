@@ -174,7 +174,7 @@ const Gallery = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <ReservationDialog>
-                      <Button className="bg-white text-black hover:opacity-90">
+                      <Button size="lg" className="bg-white text-black hover:opacity-90">
                         Reserve Online
                       </Button>
                     </ReservationDialog>

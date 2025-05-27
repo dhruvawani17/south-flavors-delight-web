@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
+import ReservationDialog from '@/components/ReservationDialog';
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -68,9 +69,11 @@ const Index = () => {
                 View Menu <ArrowRight className="ml-2" size={20} />
               </Link>
             </Button>
-            {/* <Button size="lg" variant="outline" className="border-white text-black hover:bg-white hover:text-black">
-              Reserve Table
-            </Button> */}
+            <ReservationDialog>
+                      <Button size="lg" className="bg-white text-black hover:opacity-90">
+                        Reserve Online
+                      </Button>
+                    </ReservationDialog>
           </div>
         </div>
       </section>
