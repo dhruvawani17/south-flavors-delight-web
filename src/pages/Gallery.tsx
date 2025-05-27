@@ -177,7 +177,7 @@ const Gallery = () => {
                 Reserve Table <ArrowRight className="ml-2" size={20} />
               </Link>
             </button>
-            <Button size="lg" className="bg-spice-gradient text-white hover:opacity-90">
+            <Button size="lg" className="bg-red text-white hover:opacity-90">
               <Link to="/menu" className="flex items-center">
                 View Menu <ArrowRight className="ml-2" size={20} />
               </Link>
