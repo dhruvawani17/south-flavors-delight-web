@@ -2,6 +2,9 @@
 import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import { Card } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const Gallery = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -172,9 +175,11 @@ const Gallery = () => {
             <button className="px-8 py-3 bg-spice-gradient text-black rounded-lg font-semibold hover:opacity-90 transition-opacity">
               Reserve a Table
             </button>
-            <button className="px-8 py-3 border border-spice-paprika text-spice-paprika rounded-lg font-semibold hover:bg-spice-paprika hover:text-white transition-colors">
-              View Menu
-            </button>
+            <Button size="lg" className="bg-spice-gradient text-white hover:opacity-90">
+              <Link to="/menu" className="flex items-center">
+                View Menu <ArrowRight className="ml-2" size={20} />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
