@@ -115,7 +115,7 @@ const Gallery = () => {
       {/* Filter Navigation */}
       <section className="py-8 sticky top-16 bg-white/95 backdrop-blur-md z-40">
         <div className="container mx-auto px-4">
-          <div className="className="flex flex-wrap justify-center gap-4 md:gap-3>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-3">
             {filters.map((filter) => (
               <button
                 key={filter.id}
