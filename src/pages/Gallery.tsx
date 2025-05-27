@@ -173,7 +173,9 @@ const Gallery = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-3 bg-spice-gradient text-black rounded-lg font-semibold hover:opacity-90 transition-opacity">
-              Reserve a Table
+               <Link to="/reserve" className="flex items-center">
+                Reserve Table <ArrowRight className="ml-2" size={20} />
+              </Link>
             </button>
             <Button size="lg" className="bg-spice-gradient text-white hover:opacity-90">
               <Link to="/menu" className="flex items-center">
