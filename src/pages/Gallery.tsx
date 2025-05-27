@@ -5,6 +5,7 @@ import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import ReservationDialog from '@/components/ReservationDialog';
 
 const Gallery = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -172,11 +173,11 @@ const Gallery = () => {
             Every dish tells a story, and every visit creates a memory.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-3 bg-spice-gradient text-black rounded-lg font-semibold hover:opacity-90 transition-opacity">
-               <Link to="/reserve" className="flex items-center">
-                Reserve Table <ArrowRight className="ml-2" size={20} />
-              </Link>
-            </button>
+            <ReservationDialog>
+                      <Button className="w-full bg-spice-gradient text-black hover:opacity-90">
+                        Reserve Online
+                      </Button>
+                    </ReservationDialog>
             <Button size="lg" className="bg-red text-white hover:opacity-90">
               <Link to="/menu" className="flex items-center">
                 View Menu <ArrowRight className="ml-2" size={20} />
