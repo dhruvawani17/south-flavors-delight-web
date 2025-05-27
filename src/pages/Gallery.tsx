@@ -169,9 +169,11 @@ const Gallery = () => {
             Every dish tells a story, and every visit creates a memory.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-3 bg-spice-gradient text-white rounded-lg font-semibold hover:opacity-90 transition-opacity">
-              Reserve a Table
-            </button>
+            <div className="text-center mt-12">
+            <Button size="lg" variant="outline" className="border-spice-paprika text-spice-paprika hover:bg-spice-paprika hover:text-white">
+              <Link to="/menu">View Full Menu</Link>
+            </Button>
+          </div>
             <button className="px-8 py-3 border border-spice-paprika text-spice-paprika rounded-lg font-semibold hover:bg-spice-paprika hover:text-white transition-colors">
               View Menu
             </button>
