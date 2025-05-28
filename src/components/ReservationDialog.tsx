@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Calendar } from '@/components/ui/calendar';
 import { Button } from '@/components/ui/button';
@@ -33,9 +32,9 @@ const ReservationDialog = ({ children }: ReservationDialogProps) => {
 
   const guestOptions = ['1', '2', '3', '4', '5', '6', '7', '8+'];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!selectedDate || !selectedTime || !guests || !firstName || !lastName || !email || !phone) {
       toast({
         title: "Missing Information",
@@ -45,24 +44,59 @@ const ReservationDialog = ({ children }: ReservationDialogProps) => {
       return;
     }
 
-    // Simulate reservation processing
-    setTimeout(() => {
-      toast({
-        title: "Reservation Confirmed! 🎉",
-        description: `Your table for ${guests} guests on ${selectedDate.toLocaleDateString()} at ${selectedTime} has been confirmed. We've sent a confirmation email to ${email}.`,
+    // Prepare data to send
+    const reservationData = {
+      date: selectedDate.toISOString(),
+      time: selectedTime,
+      guests,
+      firstName,
+      lastName,
+      email,
+      phone,
+      specialRequests,
+      createdAt: new Date().toISOString(),
+    };
+
+    try {
+      const response = await fetch('/api/reserve', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(reservationData),
       });
-      
-      // Reset form
-      setSelectedDate(undefined);
-      setSelectedTime('');
-      setGuests('');
-      setFirstName('');
-      setLastName('');
-      setEmail('');
-      setPhone('');
-      setSpecialRequests('');
-      setIsOpen(false);
-    }, 1000);
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        toast({
+          title: "Reservation Confirmed! 🎉",
+          description: `Your table for ${guests} guests on ${selectedDate.toLocaleDateString()} at ${selectedTime} has been confirmed. We've sent a confirmation email to ${email}.`,
+        });
+
+        // Reset form
+        setSelectedDate(undefined);
+        setSelectedTime('');
+        setGuests('');
+        setFirstName('');
+        setLastName('');
+        setEmail('');
+        setPhone('');
+        setSpecialRequests('');
+        setIsOpen(false);
+      } else {
+        toast({
+          title: "Reservation Failed",
+          description: result.message || "Something went wrong. Please try again later.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Reservation Failed",
+        description: "Unable to connect to the server. Please try again later.",
+        variant: "destructive",
+      });
+      console.error('Reservation submission error:', error);
+    }
   };
 
   const isWeekend = (date: Date) => {
@@ -218,16 +252,15 @@ const ReservationDialog = ({ children }: ReservationDialogProps) => {
                   </div>
                   
                   <div>
-                    <Label htmlFor="requests" className="text-sm font-medium">
-                      Special Requests (Optional)
+                    <Label htmlFor="specialRequests" className="text-sm font-medium">
+                      Special Requests
                     </Label>
-                    <textarea
-                      id="requests"
+                    <Input
+                      id="specialRequests"
                       value={specialRequests}
                       onChange={(e) => setSpecialRequests(e.target.value)}
-                      placeholder="Any dietary restrictions, special occasions, seating preferences..."
-                      className="mt-2 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-spice-paprika focus:border-transparent"
-                      rows={3}
+                      placeholder="Anything else we should know?"
+                      className="mt-2"
                     />
                   </div>
                 </div>
@@ -235,51 +268,8 @@ const ReservationDialog = ({ children }: ReservationDialogProps) => {
             </Card>
           </div>
 
-          {/* Summary & Submit */}
-          {selectedDate && selectedTime && guests && (
-            <Card className="bg-gradient-to-r from-orange-50 to-yellow-50 border-spice-paprika/20">
-              <CardContent className="p-6">
-                <h3 className="font-playfair text-lg font-semibold mb-3 text-gray-800">
-                  Reservation Summary
-                </h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-                  <div>
-                    <span className="font-medium text-gray-600">Date:</span>
-                    <p className="text-gray-800">{selectedDate.toLocaleDateString()}</p>
-                    {isWeekend(selectedDate) && (
-                      <p className="text-xs text-spice-paprika">Weekend pricing applies</p>
-                    )}
-                  </div>
-                  <div>
-                    <span className="font-medium text-gray-600">Time:</span>
-                    <p className="text-gray-800">{selectedTime}</p>
-                  </div>
-                  <div>
-                    <span className="font-medium text-gray-600">Guests:</span>
-                    <p className="text-gray-800">{guests} {guests === '1' ? 'Guest' : 'Guests'}</p>
-                  </div>
-                  <div>
-                    <span className="font-medium text-gray-600">Contact:</span>
-                    <p className="text-gray-800">{firstName} {lastName}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          )}
-
-          <div className="flex gap-4 pt-4">
-            <Button
-              type="button"
-              variant="outline"
-              onClick={() => setIsOpen(false)}
-              className="flex-1"
-            >
-              Cancel
-            </Button>
-            <Button
-              type="submit"
-              className="flex-1 bg-spice-gradient text-black hover:opacity-90"
-            >
+          <div className="flex justify-end">
+            <Button type="submit" className="bg-spice-paprika hover:bg-spice-paprika-dark">
               Confirm Reservation
             </Button>
           </div>
