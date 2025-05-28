@@ -9,7 +9,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
 import { CalendarIcon, Clock, Users, User, Mail, Phone } from 'lucide-react';
 
-import { supabase } from '@/supabaseClient'; // <-- Your Supabase client file
+import { supabase } from '@/supabaseClient';
 
 interface ReservationDialogProps {
   children: React.ReactNode;
