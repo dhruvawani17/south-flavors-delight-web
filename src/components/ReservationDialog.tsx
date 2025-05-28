@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Calendar } from '@/components/ui/calendar';
 import { Button } from '@/components/ui/button';
@@ -9,6 +8,9 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Card, CardContent } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
 import { CalendarIcon, Clock, Users, User, Mail, Phone } from 'lucide-react';
+
+// ** Supabase import added here **
+import { supabase } from '@/supabaseClient';
 
 interface ReservationDialogProps {
   children: React.ReactNode;
@@ -33,9 +35,9 @@ const ReservationDialog = ({ children }: ReservationDialogProps) => {
 
   const guestOptions = ['1', '2', '3', '4', '5', '6', '7', '8+'];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!selectedDate || !selectedTime || !guests || !firstName || !lastName || !email || !phone) {
       toast({
         title: "Missing Information",
@@ -45,13 +47,39 @@ const ReservationDialog = ({ children }: ReservationDialogProps) => {
       return;
     }
 
-    // Simulate reservation processing
+    // ** Supabase insert added here **
+    const { data, error } = await supabase
+      .from('reservations')  // replace 'reservations' with your actual table name
+      .insert([
+        {
+          date: selectedDate.toISOString(),
+          time: selectedTime,
+          guests,
+          first_name: firstName,
+          last_name: lastName,
+          email,
+          phone,
+          special_requests: specialRequests,
+          created_at: new Date().toISOString(),
+        }
+      ]);
+
+    if (error) {
+      toast({
+        title: "Reservation Failed",
+        description: `Error: ${error.message}`,
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Simulate reservation processing (kept as is)
     setTimeout(() => {
       toast({
         title: "Reservation Confirmed! 🎉",
         description: `Your table for ${guests} guests on ${selectedDate.toLocaleDateString()} at ${selectedTime} has been confirmed. We've sent a confirmation email to ${email}.`,
       });
-      
+
       // Reset form
       setSelectedDate(undefined);
       setSelectedTime('');
@@ -81,7 +109,7 @@ const ReservationDialog = ({ children }: ReservationDialogProps) => {
             Reserve Your Table
           </DialogTitle>
         </DialogHeader>
-        
+
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid lg:grid-cols-2 gap-6">
             {/* Date & Time Selection */}
@@ -91,7 +119,7 @@ const ReservationDialog = ({ children }: ReservationDialogProps) => {
                   <CalendarIcon className="h-5 w-5 text-spice-paprika" />
                   Select Date & Time
                 </h3>
-                
+
                 <div className="space-y-4">
                   <div>
                     <Label className="text-sm font-medium">Choose Date</Label>
@@ -103,7 +131,7 @@ const ReservationDialog = ({ children }: ReservationDialogProps) => {
                       className="rounded-md border mt-2"
                     />
                   </div>
-                  
+
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="time" className="text-sm font-medium flex items-center gap-2">
@@ -123,7 +151,7 @@ const ReservationDialog = ({ children }: ReservationDialogProps) => {
                         </SelectContent>
                       </Select>
                     </div>
-                    
+
                     <div>
                       <Label htmlFor="guests" className="text-sm font-medium flex items-center gap-2">
                         <Users className="h-4 w-4" />
@@ -154,7 +182,7 @@ const ReservationDialog = ({ children }: ReservationDialogProps) => {
                   <User className="h-5 w-5 text-spice-paprika" />
                   Contact Information
                 </h3>
-                
+
                 <div className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
@@ -184,7 +212,7 @@ const ReservationDialog = ({ children }: ReservationDialogProps) => {
                       />
                     </div>
                   </div>
-                  
+
                   <div>
                     <Label htmlFor="email" className="text-sm font-medium flex items-center gap-2">
                       <Mail className="h-4 w-4" />
@@ -200,7 +228,7 @@ const ReservationDialog = ({ children }: ReservationDialogProps) => {
                       required
                     />
                   </div>
-                  
+
                   <div>
                     <Label htmlFor="phone" className="text-sm font-medium flex items-center gap-2">
                       <Phone className="h-4 w-4" />
@@ -216,7 +244,7 @@ const ReservationDialog = ({ children }: ReservationDialogProps) => {
                       required
                     />
                   </div>
-                  
+
                   <div>
                     <Label htmlFor="requests" className="text-sm font-medium">
                       Special Requests (Optional)
@@ -242,47 +270,25 @@ const ReservationDialog = ({ children }: ReservationDialogProps) => {
                 <h3 className="font-playfair text-lg font-semibold mb-3 text-gray-800">
                   Reservation Summary
                 </h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-                  <div>
-                    <span className="font-medium text-gray-600">Date:</span>
-                    <p className="text-gray-800">{selectedDate.toLocaleDateString()}</p>
-                    {isWeekend(selectedDate) && (
-                      <p className="text-xs text-spice-paprika">Weekend pricing applies</p>
-                    )}
-                  </div>
-                  <div>
-                    <span className="font-medium text-gray-600">Time:</span>
-                    <p className="text-gray-800">{selectedTime}</p>
-                  </div>
-                  <div>
-                    <span className="font-medium text-gray-600">Guests:</span>
-                    <p className="text-gray-800">{guests} {guests === '1' ? 'Guest' : 'Guests'}</p>
-                  </div>
-                  <div>
-                    <span className="font-medium text-gray-600">Contact:</span>
-                    <p className="text-gray-800">{firstName} {lastName}</p>
-                  </div>
+                <div className="flex flex-col gap-2 text-gray-700">
+                  <p><strong>Date:</strong> {selectedDate.toLocaleDateString()}</p>
+                  <p><strong>Time:</strong> {selectedTime}</p>
+                  <p><strong>Guests:</strong> {guests}</p>
+                  <p><strong>Name:</strong> {firstName} {lastName}</p>
+                  <p><strong>Email:</strong> {email}</p>
+                  <p><strong>Phone:</strong> {phone}</p>
+                  {specialRequests && <p><strong>Special Requests:</strong> {specialRequests}</p>}
                 </div>
               </CardContent>
             </Card>
           )}
 
-          <div className="flex gap-4 pt-4">
-            <Button
-              type="button"
-              variant="outline"
-              onClick={() => setIsOpen(false)}
-              className="flex-1"
-            >
-              Cancel
-            </Button>
-            <Button
-              type="submit"
-              className="flex-1 bg-spice-gradient text-black hover:opacity-90"
-            >
-              Confirm Reservation
-            </Button>
-          </div>
+          <Button
+            type="submit"
+            className="w-full bg-spice-paprika hover:bg-spice-paprika/90"
+          >
+            Reserve Now
+          </Button>
         </form>
       </DialogContent>
     </Dialog>
